@@ -1,0 +1,7 @@
+{
+  "name": "com.browserbridge.bridge",
+  "description": "Browser Bridge Native Messaging host",
+  "path": "/ABSOLUTE/PATH/TO/bridge.py",
+  "type": "stdio",
+  "allowed_origins": ["chrome-extension://REPLACE_WITH_UNPACKED_EXTENSION_ID/"]
+}

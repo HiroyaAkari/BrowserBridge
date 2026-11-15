@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Bridge",
+  "version": "1.4.1",
+  "description": "An approval-gated bridge from supported chat pages to a local Native Messaging host.",
+  "minimum_chrome_version": "116",
+  "permissions": ["nativeMessaging", "storage", "tabs"],
+  "host_permissions": [
+    "https://claude.ai/*",
+    "https://chatgpt.com/*",
+    "https://gemini.google.com/*", "https://www.perplexity.ai/*", "https://perplexity.ai/*", "https://arena.ai/*", "https://chat.z.ai/*", "https://z.ai/*", "https://*.kimi.ai/*", "https://*.kimi.com/*"
+  ],
+  "background": {
+    "service_worker": "background/worker.js"
+  },
+  "action": {
+    "default_title": "Browser Bridge",
+    "default_popup": "ui/popup.html"
+  },
+  "content_scripts": [{
+    "matches": [
+      "https://claude.ai/*",
+      "https://chatgpt.com/*",
+      "https://gemini.google.com/*", "https://www.perplexity.ai/*", "https://perplexity.ai/*", "https://arena.ai/*", "https://chat.z.ai/*", "https://z.ai/*", "https://*.kimi.ai/*", "https://*.kimi.com/*"
+    ],
+    "js": [
+      "content/parser.js",
+      "content/format.js",
+      "content/selectors.js",
+      "content/adapters/util.js",
+      "content/adapters/claude.js",
+      "content/adapters/chatgpt.js",
+      "content/adapters/gemini.js", "content/adapters/arena.js", "content/adapters/zai.js", "content/adapters/kimi.js", "content/adapters/perplexity.js",
+      "content/relay.js", "content/save.js", "content/content.js"
+    ],
+    "run_at": "document_idle",
+    "all_frames": false
+  }]
+}

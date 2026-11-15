@@ -1,0 +1,1 @@
+(function(root){'use strict';var BB=root.BB=root.BB||{};BB.adapters=BB.adapters||{};BB.adapters.perplexity=function(){return BB.adapters.factory('perplexity',BB.selectors.perplexity);};})(typeof globalThis!=='undefined'?globalThis:this);

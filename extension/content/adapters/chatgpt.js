@@ -1,0 +1,1 @@
+(function(root){'use strict';var BB=root.BB=root.BB||{};BB.adapters=BB.adapters||{};BB.adapters.chatgpt=function(){return BB.adapters.factory('chatgpt',BB.selectors.chatgpt);};})(typeof globalThis!=='undefined'?globalThis:this);

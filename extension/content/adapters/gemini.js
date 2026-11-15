@@ -1,0 +1,1 @@
+(function(root){'use strict';var BB=root.BB=root.BB||{};BB.adapters=BB.adapters||{};BB.adapters.gemini=function(){return BB.adapters.factory('gemini',BB.selectors.gemini);};})(typeof globalThis!=='undefined'?globalThis:this);

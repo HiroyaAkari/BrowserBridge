@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Browser Bridge</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+<header><h1>Browser Bridge</h1><span id="mode-pill" class="pill">Ask</span></header>
+<section><div class="row"><span class="label">Session key</span><span><button id="show" class="ghost">Show</button><button id="copy" class="ghost">Copy</button></span></div><code id="key">••••••••••••••••••••••••</code><p>Generated per browser session. It is not a password.</p></section>
+<section><span class="label">Mode</span><div class="modes"><button id="ask" class="selected">Ask<small>Approve each run</small></button><button id="auto">Auto<small>Run unless held</small></button></div><p id="mode-help">Ask is the default and resets when the browser closes.</p></section>
+<section id="notice" class="notice" hidden>A command needs your decision.</section>
+<section><div class="row"><span class="label">Pending command</span><span id="count" class="pill" hidden></span></div><div id="empty">Nothing waiting.</div><div id="pending" hidden><pre id="command"></pre><p id="reason"></p><button id="run" class="primary">Run</button><button id="skip">Skip</button></div></section>
+<section><span class="label">Running</span><pre id="running">Idle.</pre></section>
+<footer><button id="stop" class="danger">■ Stop</button><span id="status"></span></footer>
+<script src="../background/browser.js"></script><script src="popup.js"></script></body></html>
+<!-- END-OF-FILE extension/ui/popup.html 12 -->
